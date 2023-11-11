@@ -45,15 +45,19 @@
 - 이상치를 포함하는 데이터 삭제
 
     <img src="./README_img/이상치 제거.jpg" height="300px" width="600x">
+
 ### **3) EDA**
 - Category : Sedan 46.7% > Jeep 25.1% > Hatchback 16.6%
-<img src="./README_img/EDA_Category.png" height="300px" width="600x">
+    <img src="./README_img/EDA_Category.png" height="300px" width="600x">
+
 - Color : Black 24.8% > White 23.4% > Silver 20.8%
-<img src="./README_img/EDA_Color.png" height="300px" width="600x">
+    <img src="./README_img/EDA_Color.png" height="300px" width="600x">
+
 - Fuel Type : Petrol 51.4% > Diesel 21.6% > Hybrid 20.4%
-<img src="./README_img/EDA_Fuel Type.png" height="300px" width="600x">
+    <img src="./README_img/EDA_Fuel Type.png" height="300px" width="600x">
+
 - 연속형 변수 상관관계 Heatmap : 타겟값 Price와의 상관계수가 가장 높은 변수는 생산년도(Prod. Year)이다.
-<img src="./README_img/EDA_Heatmap.jpg" height="400px" width="400x">
+    <img src="./README_img/EDA_Heatmap.jpg" height="400px" width="400x">
 
 ### **3) 모델 학습 및 파라미터 설정**
 1. 데이터를 Train / Validation / Test set으로 6:2:2 비율로 분리
