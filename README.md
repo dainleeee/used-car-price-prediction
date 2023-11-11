@@ -86,40 +86,38 @@
     - TargetEncoder
         - min_samples_leaf : 7
 
-4. 최적의 파라미터를 적용하여 모델 학습 및 검증 후 최종적으로 테스트 셋을 이용해 모델을 예측한 결과
+### **4) 테스트 셋 모델 예측**  
+- 최적의 파라미터를 적용하여 모델 학습 및 검증 후, 최종적으로 테스트 셋을 이용해 모델을 예측한 결과
     - Train set R2 Score : 0.72
     - Validation set R2 Score : 0.74
     - **Test set R2 Score : 0.76**
-5. 가설 검증
 
-    1. Permutaion Importance
+### **5) 가설 검증**    
+1. Permutaion Importance
 
-        : 모델 예측에 가장 큰 영향을 미치는 Feature 를 파악하는 방법
+    : 모델 예측에 가장 큰 영향을 미치는 Feature 를 파악하는 방법
 
-        <img src="./README_img/Permutation_Importance.jpg" height="300px" width="600px">
+    <img src="./README_img/Permutation_Importance.jpg" height="300px" width="600px">
 
-        - 중고차 가격에 가장 큰 영향을 미치는 요소는 Engine volume이 아닌 생산년도이다.
-        - 생산년도 > 에어백 수 > 연료 유형 > 기어 유형 순서로 영향도가 높음
+    - 중고차 가격에 가장 큰 영향을 미치는 요소는 Engine volume이 아닌 생산년도이다.
+    - 생산년도 > 에어백 수 > 연료 유형 > 기어 유형 순서로 영향도가 높음
  
-    2. PDP
+2. PDP
         
-        : 예측 모델을 만들었을 때, 어떤 특성이 예측모델의 타겟 변수에 어떤 영향을 미쳤는지 알 수 있는 그래프
+    : 예측 모델을 만들었을 때, 어떤 특성이 예측모델의 타겟 변수에 어떤 영향을 미쳤는지 알 수 있는 그래프
 
-        - Engine volume이 클수록 가격이 높아진다.
+    - Engine volume이 클수록 가격이 높아진다.
 
-            <img src="./README_img/PDP_Engine Volume.jpg" height="300px" width="600px">
+        <img src="./README_img/PDP_Engine Volume.jpg" height="300px" width="600px">
         
-        - 생산년도가 최근일수록 가격이 높아진다. 
+    - 생산년도가 최근일수록 가격이 높아진다. 
 
-            <img src="./README_img/PDP_Prod.year.jpg" height="300px" width="600px">
+        <img src="./README_img/PDP_Prod.year.jpg" height="300px" width="600px">
         
-        - 주행거리가 많을수록 가격이 낮아진다.
+    - 주행거리가 많을수록 가격이 낮아진다.
 
-            <img src="./README_img/PDP_Mileage.jpg" height="300px" width="600px">
+        <img src="./README_img/PDP_Mileage.jpg" height="300px" width="600px">
         
-
-
-     
 ---
 ## **📌최종 결과**
 - 모델 Test set R2 Score : 0.76
