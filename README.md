@@ -48,21 +48,26 @@
 
 ### **3) EDA**
 - Category : Sedan 46.7% > Jeep 25.1% > Hatchback 16.6%
+
     <img src="./README_img/EDA_Category.png" height="300px" width="600x">
 
 - Color : Black 24.8% > White 23.4% > Silver 20.8%
+
     <img src="./README_img/EDA_Color.png" height="300px" width="600x">
 
 - Fuel Type : Petrol 51.4% > Diesel 21.6% > Hybrid 20.4%
+
     <img src="./README_img/EDA_Fuel Type.png" height="300px" width="600x">
 
 - 연속형 변수 상관관계 Heatmap : 타겟값 Price와의 상관계수가 가장 높은 변수는 생산년도(Prod. Year)이다.
+
     <img src="./README_img/EDA_Heatmap.jpg" height="400px" width="400x">
 
 ### **3) 모델 학습 및 파라미터 설정**
 1. 데이터를 Train / Validation / Test set으로 6:2:2 비율로 분리
 
     <img src="./README_img/Train,Validation,Test Set.png" height="300px" width="300x">
+
 2. 여러 회귀 모델과 인코더를 조합하여 최적의 모델 선택
 
     <img src="./README_img/Modeling.png" height="300px" width="400x">
@@ -70,7 +75,9 @@
     - R2 Score가 가장 좋은 TargetEncoder와 RandomForestRegressor 조합을 선택하여 모델링 진행
 
 3. RandomizedSearchCV로 최적의 하이퍼파라미터 찾기
+
     <img src="./README_img/Optimal_Hyperparameter.jpg" height="90px" width="450px">
+
     - RandomForestRegressor
         - max_depth : 15 (트리의 최대 깊이)
         - max_features : 0.98 (최적의 분할을 위해 고려할 최대 피처 수)
@@ -98,17 +105,19 @@
         
         : 예측 모델을 만들었을 때, 어떤 특성이 예측모델의 타겟 변수에 어떤 영향을 미쳤는지 알 수 있는 그래프
 
-        <img src="./README_img/PDP_Engine Volume.jpg" height="300px" width="600px">
-        
         - Engine volume이 클수록 가격이 높아진다.
 
-        <img src="./README_img/PDP_Prod.year.jpg" height="300px" width="600px">
-
+            <img src="./README_img/PDP_Engine Volume.jpg" height="300px" width="600px">
+        
         - 생산년도가 최근일수록 가격이 높아진다. 
 
-        <img src="./README_img/PDP_Mileage.jpg" height="300px" width="600px">
+            <img src="./README_img/PDP_Prod.year.jpg" height="300px" width="600px">
         
         - 주행거리가 많을수록 가격이 낮아진다.
+
+            <img src="./README_img/PDP_Mileage.jpg" height="300px" width="600px">
+        
+
 
      
 ---
